@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Video Replay",
+  "name": "Youtube Loop Option",
   "description": "A loop option is added to the settings menu in a youtube video. Only works on youtube main site.",
   "version": "1.2",
 
