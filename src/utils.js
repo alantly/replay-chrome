@@ -7,5 +7,5 @@ function add_hash(tag) {
 };
 
 function get_bool_attr(object,attr_name) {
-  return object.attr(attr_name) === "true"
+  return object.attr(attr_name) === "true";
 }
