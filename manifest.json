@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Video Replay",
-  "description": "This extension adds a loop function to html5 videos.",
+  "description": "A loop option is added to the settings menu in a youtube video. Only works on youtube main site.",
   "version": "1.2",
 
   "permissions": [
