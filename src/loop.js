@@ -26,9 +26,9 @@ function create_loop_btn(new_btn_id) {
 
   loop_check_box.onclick = function() {
     var checkbox_status_attr = "aria-checked";
-    var new_attr = !(loop_menu_item.attr(checkbox_status_attr) === 'true');
-    loop_menu_item.attr(checkbox_status_attr, new_attr);
-    apply_loop_to_video(new_attr);
+    var new_reversed_attr = !str_to_bool(loop_menu_item.attr(checkbox_status_attr));
+    loop_menu_item.attr(checkbox_status_attr, new_reversed_attr);
+    apply_loop_to_video(new_reversed_attr);
   };
 
   return loop_menu_item;
@@ -42,7 +42,11 @@ function add_hash(tag) {
   return "#"+tag;
 };
 
-// video.get(0).onloadstart = add_loop_btn_to_menu;
+function str_to_bool(string) {
+  return string === 'true';
+};
+
+video.get(0).onloadstart = add_loop_btn_to_menu;
 var setting_btn = $(ytp_menu_btn_id).get(0);
 setting_btn.onmouseenter = function() {
   if (!item_exists(loop_btn_id)) {
