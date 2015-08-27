@@ -35,7 +35,10 @@ function create_loop_btn(new_btn_id) {
   return loop_menu_item;
 };
 
-video_obj.onloadstart = add_loop_btn_to_menu;
+video_obj.onloadstart = function() {
+  video.removeAttr("loop")
+};
+
 var setting_btn = $(ytp_menu_btn_id).get(0);
 setting_btn.onmouseenter = function() {
   if (!item_exists(loop_btn_id)) {
