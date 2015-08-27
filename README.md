@@ -1,4 +1,3 @@
-# replay-chrome
+# Replay-chrome
 
-For the people who use youtube to listen to music,
-This lets you replay that awesome song without pressing play again.
+This extension adds a loop option to youtube videos. Specifically, the settings menu in a video will have the ability to loop without rebuffering the video again. It works exactly like pressing play again except automatically.
