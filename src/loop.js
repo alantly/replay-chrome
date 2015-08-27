@@ -3,7 +3,6 @@ var loop_btn_id = "ytp-loop-checkbox";
 var ytp_menu_popup_id = ".ytp-menu#ytp-main-menu-id"
 var ytp_menu_btn_id = ".ytp-button.ytp-settings-button"
 
-
 function apply_loop_to_video(loop_status) {
   video.attr("loop",loop_status);
 };
@@ -26,24 +25,12 @@ function create_loop_btn(new_btn_id) {
 
   loop_check_box.onclick = function() {
     var checkbox_status_attr = "aria-checked";
-    var new_reversed_attr = !str_to_bool(loop_menu_item.attr(checkbox_status_attr));
+    var new_reversed_attr = !get_bool_attr(loop_menu_item, checkbox_status_attr);
     loop_menu_item.attr(checkbox_status_attr, new_reversed_attr);
     apply_loop_to_video(new_reversed_attr);
   };
 
   return loop_menu_item;
-};
-
-function item_exists(item_tag) {
-  return $(add_hash(item_tag)).length > 0;
-};
-
-function add_hash(tag) {
-  return "#"+tag;
-};
-
-function str_to_bool(string) {
-  return string === 'true';
 };
 
 video.get(0).onloadstart = add_loop_btn_to_menu;
