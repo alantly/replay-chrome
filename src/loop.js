@@ -1,8 +1,10 @@
-var video = $(".video-stream.html5-main-video");
-var video_obj = video[0];
+var video_id = ".video-stream.html5-main-video";
 var loop_btn_id = "ytp-loop-checkbox";
 var ytp_menu_popup_id = ".ytp-menu#ytp-main-menu-id";
 var ytp_menu_btn_id = ".ytp-button.ytp-settings-button";
+
+var video = $(video_id);
+var video_obj = video[0];
 
 function apply_loop_to_video(loop_status) {
   video.attr("loop",loop_status);
