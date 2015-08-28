@@ -10,7 +10,7 @@ function apply_loop_to_video(loop_status) {
 
 function add_loop_btn_to_menu() {
   var video_menu = $(ytp_menu_popup_id);
-  video_menu.prepend(create_loop_btn(loop_btn_id));
+  video_menu.append(create_loop_btn(loop_btn_id));
 };
 
 function create_loop_btn(new_btn_id) {
