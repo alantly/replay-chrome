@@ -1,8 +1,8 @@
 var video = $(".video-stream.html5-main-video");
 var video_obj = video[0];
 var loop_btn_id = "ytp-loop-checkbox";
-var ytp_menu_popup_id = ".ytp-menu#ytp-main-menu-id"
-var ytp_menu_btn_id = ".ytp-button.ytp-settings-button"
+var ytp_menu_popup_id = ".ytp-menu#ytp-main-menu-id";
+var ytp_menu_btn_id = ".ytp-button.ytp-settings-button";
 
 function apply_loop_to_video(loop_status) {
   video.attr("loop",loop_status);
@@ -10,7 +10,7 @@ function apply_loop_to_video(loop_status) {
 
 function add_loop_btn_to_menu() {
   var video_menu = $(ytp_menu_popup_id);
-  video_menu.prepend(create_loop_btn(loop_btn_id));
+  video_menu.append(create_loop_btn(loop_btn_id));
 };
 
 function create_loop_btn(new_btn_id) {
@@ -36,7 +36,7 @@ function create_loop_btn(new_btn_id) {
 };
 
 video_obj.onloadstart = function() {
-  video.removeAttr("loop")
+  video.removeAttr("loop");
 };
 
 var setting_btn = $(ytp_menu_btn_id).get(0);
