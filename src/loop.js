@@ -48,5 +48,5 @@ $('html').click(function() {
       add_loop_btn_to_menu();
     }
   };
-}
+});
 

@@ -3,7 +3,7 @@
 
   "name": "Youtube Loop Option",
   "description": "A loop option is added to the settings menu in a youtube video. Only works on youtube main site.",
-  "version": "1.2",
+  "version": "1.3",
 
   "permissions": [
     "activeTab"
